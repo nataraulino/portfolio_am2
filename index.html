@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Natã's Bizarre Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700" rel="stylesheet">
+	</head>
+	<body>
+
+		<header class="header" id="inicio">
+			<div class="title">
+		  	<h1>ナタンの奇妙なポートフォリオ</h1>
+		  	<h3>- Natã's Bizarre Adventure -</h3>
+		  	<nav>
+		  		<a href="#perfil">Perfil</a>
+		  		<a href="#projetos">Projetos</a>
+		  		<a href="#ilustracoes">Ilustrações</a>
+		  	</nav>
+			</div>
+		</header>
+		<div class="wrapper">
+			<section class="row" id="perfil">
+			  <div class="column">
+			  	<div class="card">
+			  		<h3>Perfil</h3>
+			  		<hr>
+			  		<div class="row">
+			  			<div class="column center">
+			  				<img alt="Natã, o dono dessa página" id="foto" src="img/nata.jpg" onclick='document.getElementById("foto").src = "img/nata2.jpg"'>
+			  			</div>
+			  			<div class="column">
+			  				<p><b>Nome:</b> Natã Lael Gomes Raulino <b>Idade:</b> 19 anos de muita decepção <span title="18/03/1999">&#9811;</span></p>
+			  				<p><b>Profissão:</b> Estudante / programador / ilustrador... Nem sei mais kk</p>
+			  				<p><b>Curso:</b> SMD (<i>stands for "Socorro Meu Deus"</i>) S3E<span id="mes"></span>.<span id="dia"></span></p>
+			  				<p><b>Redes Sociais:</b> <a href="https://twitter.com/nataraulino">Twitter</a> | <a href="https://www.instagram.com/theonlynata5000/">Instagram</a></p>
+			  			</div>
+			  		</div>
+			  	</div>
+			  </div>
+			</section>
+
+			<section class="row" id="projetos">
+			  <div class="column">
+			  	<div class="card">
+			  		<h3>Projetos</h3>
+			  		<hr>
+			  		<div class="row center">
+			  			<div class="column">
+		  					<img alt="Opira" src="img/opira.jpg">
+			  				<h3>Opira e as Sementes da Esperança</h3>
+			  				<p>Projeto do 1º semestre (2017.2) da equipe Daruma onde fiquei responsável por ilustrar as principais cenas da história.</p>
+			  			</div>
+			  			<div class="column">
+			  				<img alt="MicroCaso" src="img/microcaso.jpg">
+			  				<h3>MicroCaso</h3>
+			  				<p>Projeto do 2º semestre (2018.1) da equipe GoGo onde fiquei responsável por escrever todo o código do jogo.</p>
+			  			</div>
+			  			<div class="column">
+		  					<img alt="Ariel (nome provisório)" src="img/ariel.jpg">
+			  				<h3>Ariel (nome provisório)</h3>
+			  				<p>Projeto do 3º semestre (2018.2) da equipe Armadillo onde fiquei responsável por fazer a <i>concept art</i> e por ilustrar parte das cenas da história.</p>
+			  			</div>
+			  		</div>
+			  	</div>
+			  </div>
+			</section>
+
+			<section class="row" id="ilustracoes">
+			  <div class="column">
+			  	<div class="card">
+			  		<h3>Ilustrações</h3>
+			  		<hr>
+			  		<div class="row center">
+			  			<div class="column"><img alt="Miki, a garota" src="img/img1.jpg"></div>
+			  			<div class="column"><img alt="Thomas, o gato" src="img/img2.jpg"></div>
+			  			<div class="column"><img alt="Princesa" src="img/img3.jpg"></div>
+			  		</div>
+			  		<div class="row center">
+			  			<div class="column"><img alt="A queda" src="img/img4.jpg"></div>
+			  			<div class="column"><img alt="Miz Cracker (Pixel Art)" src="img/img5.jpg"></div>
+			  			<div class="column"><img alt="Auto-retrato" src="img/img6.jpg"></div>
+			  		</div>
+			  	</div>
+			  </div>
+			</section>
+
+			<section class="row" id="contato">
+				<div class="column"></div>
+			  <div class="column center">
+					<button id="myBtn" class="btn">Entrar em contato</button>
+
+					<div id="myModal" class="modal">
+					  <div class="modal-content">
+						  <div class="modal-header">
+						    <span class="close">&times;</span>
+						    <h2>Formulário de contato</h2>
+						  </div>
+						  <form>
+							  <div class="modal-body center">
+							    <label for="nome">Nome</label>
+							    <br>
+							    <input type="text" id="nome" name="nome" class="form">
+							    <br>
+							    <label for="email">E-mail</label>
+							    <br>
+									<input type="text" id="email" name="email" class="form">
+									<br>
+									<label for="telefone">Telefone</label>
+									<br>
+									<input type="text" id="telefone" name="telefone" class="form">
+									<br>
+									<label for="mensagem">Mensagem</label>
+									<br>
+									<textarea id="mensagem" name="mensagem" class="form2"></textarea>
+							  </div>
+							  <div class="modal-footer">
+							    <input class="btn2" type="submit" value="Enviar">
+							  </div>
+						  </form>
+						</div>
+					</div>
+			  </div>
+			  <div class="column"></div>
+			</section>
+		</div>
+		<div class="footer">
+		  <a href="#inicio">Início</a>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				var d = new Date();
+		    var day = d.getDate();
+		    var month = d.getMonth();
+		    document.getElementById("mes").innerHTML = month + 1;
+		    document.getElementById("dia").innerHTML = day;
+			});
+
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+		    modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+		    modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+		    if (event.target == modal) {
+	        modal.style.display = "none";
+		    }
+			}
+		</script>
+
+	</body>
+</html>
